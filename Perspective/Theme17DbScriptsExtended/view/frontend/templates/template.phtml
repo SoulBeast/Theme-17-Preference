@@ -1,0 +1,14 @@
+<?php
+
+$viewModel = $block->getData('post_model');
+
+$collection = $viewModel->getPostCollection();
+foreach($collection as $item){
+
+    echo "<pre>";
+    print_r($item->getData());
+    echo "<br>" . $item->prefName() . "<br>";
+    echo $item->shortUrl();
+    echo "</pre>";
+}
+?>
